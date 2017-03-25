@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans xmlns="http://www.springframework.org/schema/mvc"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xmlns:beans="http://www.springframework.org/schema/beans"
+             xmlns:task="http://www.springframework.org/schema/task"
+             xsi:schemaLocation="http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd
+        http://www.springframework.org/schema/task http://www.springframework.org/schema/task/spring-task.xsd
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <beans:import resource="controllers.xml"/>
+    <beans:import resource="database.xml"/>
+
+
+    <task:annotation-driven
+            executor="defaultExecutor"/>
+
+    <task:executor id="defaultExecutor"
+                   pool-size="15-50"
+                   queue-capacity="1000"
+                   keep-alive="10"
+                   rejection-policy="CALLER_RUNS"/>
+
+</beans:beans>
