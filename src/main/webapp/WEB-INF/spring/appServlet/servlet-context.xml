@@ -8,7 +8,7 @@
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <beans:import resource="controllers.xml"/>
-    <beans:import resource="database.xml"/>
+    <beans:import resource="database-local.xml"/>
 
 
     <task:annotation-driven

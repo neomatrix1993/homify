@@ -39,6 +39,7 @@ public class CustomerDaoImpl implements CustomerDao {
     }
 
     @Override
+    @Transactional
     public CustomerEntity get(int id) {
         try {
             return (CustomerEntity) sessionFactory.getCurrentSession().get(CustomerEntity.class, id);

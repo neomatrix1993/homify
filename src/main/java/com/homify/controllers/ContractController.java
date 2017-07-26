@@ -54,7 +54,7 @@ public class ContractController {
         return contractService.getRevenueByCustomerId(id);
     }
 
-    @RequestMapping(value = "",
+    @RequestMapping(value = "/type",
             method = RequestMethod.GET,
             produces = MediaType.APPLICATION_JSON_VALUE)
     public BaseResponse getTypeRevenue(@RequestParam(value = "type") String type) {

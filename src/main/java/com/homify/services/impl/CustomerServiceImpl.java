@@ -5,6 +5,7 @@ import com.homify.dao.CustomerDao;
 import com.homify.entities.CustomerEntity;
 import com.homify.services.CustomerService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.function.Function;
 
@@ -12,6 +13,8 @@ import java.util.function.Function;
  * The customer service implementation.
  * Created by swapnil.gupta on 3/25/17.
  */
+
+@Service
 public class CustomerServiceImpl implements CustomerService {
 
     private CustomerDao customerDao;
